@@ -1,0 +1,73 @@
+<xml name="MelonU" namespace="Melon/U">
+    <module name="request" file="source_lumith/NanoRequest.pm">
+        <cpan name="Text::Template" />
+        <cpan name="XML::Bare" qw="forcearray"/>
+        <cpan name="CGI::Carp" qw="fatalsToBrowser" />
+        <cpan name="Data::Dumper" debug />
+        <cpan name="Data::UUID" />
+        <cpan name="CGI" />
+        <cpan name="NanoMsg::Raw" />
+        <cpan name="Time::HiRes" qw="gettimeofday tv_interval"/>
+    </module>
+    
+    <module name="sessions" file="source_lumith/Sessions.pm">
+        <cpan name="File::Slurp" />
+    </module>
+    
+    <module name="cookies" file="source_lumith/Cookies.pm">
+        <cpan name="CGI::Cookie" /> 
+    </module>
+    
+    <!--<module name="templates" file="source_lumith/Templates.pm">
+    </module>-->
+    
+    <module name="users" file="source_lumith/Users.pm">
+    </module>
+    
+    <module name="response" file="source_lumith/Response.pm">
+        <cpan name="JSON::XS" />
+    </module>
+    
+    <module name="router" file="source_lumith/Router.pm">
+    </module>   
+    
+    <module name="urls" file="source_lumith/Urls.pm">
+    </module>
+
+    <module name="home" file="source_lumith/Home.pm">
+        <blah x=11/>
+    </module>
+    
+    <module name="testpages" file="source_lumith/TestPages.pm">
+    </module>
+    
+    <module name="utilfuncs" file="source_lumith/UtilFuncs.pm">
+    </module>
+    
+    <module name="softpage" file="source_lumith/Softpage.pm">
+    </module>
+    
+    <module name="softresp" file="source_lumith/SoftResp.pm" multiple=1>
+        <cpan name="JSON::XS" />
+    </module>
+    
+    <module name="statics" file="source_lumith/Statics.pm">
+        <setup>
+            <dir url='x' path='statics/x'/>
+            <dir url='js' path='/var/www/html/wcm/statics/js'/>
+            <dir url='lumith/systems/jsa' path='/var/www/html/wcm/systems'/>
+            <dir url='lumith/built' path='/var/www/html/wcm/built'/>
+        </setup>
+    </module>
+    
+    <system name="core2" file="systems/Core2.xml">
+        <import mod="api"/>
+        <import mod="log"/>
+        <import mod="templates" />
+        <import mod="xml" />
+    </system>
+    
+    <!-- This system module MUST come last -->
+    <module name="systemx" file="source_shared/Systemx.pm">
+    </module>
+</xml>

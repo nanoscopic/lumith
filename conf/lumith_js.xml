@@ -1,0 +1,47 @@
+<xml name="JS" namespace="JS">
+    <module name="test" file="source_lumith_js/test.js">
+    </module>
+    
+    <module name="dc" file="source_lumith_js/domCascade.js">
+    </module>
+    
+    <module name="softpage" file="source_lumith_js/softpage.js">
+        <root>/wcm3</root>
+    </module>
+    
+    <module name="dcJsTable" file="source_lumith_js/dc/jsTable.js">
+    </module>        
+    
+    <module name="dcJsButton" file="source_lumith_js/dc/jsButton.js">
+    </module>
+    
+    <module name="dcJsSorter" file="source_lumith_js/dc/jsSorter.js">
+    </module>
+    
+    <module name="dcJsForm" file="source_lumith_js/dc/jsForm.js">
+    </module>
+    
+    <module name="dcJsData" file="source_lumith_js/dc/jsData.js">
+    </module>
+    
+    <module name="mersenne" file="source_lumith_js/mersenne.js">
+    </module>
+    
+    <module name="random" file="source_lumith_js/random.js">
+    </module>
+    
+    <!--<jsdep name="jquery" url="s/js/lib/jquery/jquery-2.2.4.min.js"/>
+    <jsdep requires="jquery" url="s/js/lib/jquery/DataTables/datatables.min.js"/>
+    <css url="s/js/lib/jquery/DataTables/datatables.min.css"/>-->
+    
+    <system name="core2" file="systems/Core2.xml">
+        <import mod="api"/>
+        <import mod="log"/>
+        <import mod="templates" />
+        <import mod="xml" />
+    </system>
+    
+    <!-- This system module MUST come last -->
+    <module name="systemx" file="source_lumith_js/system.js">
+    </module>
+</xml>
